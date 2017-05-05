@@ -6,11 +6,12 @@ cd SydneyJenkins/src/
 
 echo "Download Sydney Graphml file"
 touch status
-sudo curl "https://s3-us-west-2.amazonaws.com/graphml.rd-switchboard/sydney/sydney.zip"
+aws s3 --region us-west-2 cp "s3://raphml.rd-switchboard/sydney/sydney.zip" .
+#sudo curl "https://s3-us-west-2.amazonaws.com/graphml.rd-switchboard/sydney/sydney.zip"
 sudo unzip sydney.zip
 
 echo "Excute Java"
-javacc HeadlessSimple.java
+javac HeadlessSimple.java java HeadlessSimple
 
 echo "Copy files to S3..."
 NOW="$(date +'%Y-%m-%d')"
