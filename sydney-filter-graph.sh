@@ -5,8 +5,9 @@ echo "Cd target forlder"
 cd SydneyJenkins/src/
 
 echo "Download Sydney Graphml file"
+touch status
 aws s3 --region us-west-2 cp "s3://graphml.rd-switchboard/sydney/sydney.zip"
-sudo unzip sydney.zip -d lib 
+sudo unzip sydney.zip
 
 echo "Excute Java"
 javacc HeadlessSimple.java
