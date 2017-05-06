@@ -10,7 +10,9 @@ aws s3 --region us-west-2 cp "s3://graphml.rd-switchboard/sydney/sydney.zip" .
 sudo unzip sydney.zip
 
 echo "Excute Java"
-cd ../SydneyJenkins
+cd ..
+cd ..
+cd ..
 mvn clean install
 java -jar -Dapple.awt.UIElement="true" target/GephiFilter-1.0.jar -h 
 
