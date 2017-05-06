@@ -14,8 +14,8 @@ cd ..
 cd ..
 cd ..
 mvn clean install
-java -jar -Dapple.awt.UIElement="true" target/GephiFilter-1.0.jar -h 
+mvn clean package
 
 echo "Copy files to S3..."
 NOW="$(date +'%Y-%m-%d')"
-aws s3 --region us-west-2 ../SydneyJenkins/output.gexf s3://graphml.rd-switchboard/sydney/filtergraph/$NOW/
+aws s3 --region us-west-2 output.gexf s3://graphml.rd-switchboard/sydney/filtergraph/$NOW/
