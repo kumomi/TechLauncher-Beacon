@@ -14,7 +14,7 @@ echo "Excute Java"
 cd ..
 cd ..
 cd ..
-mvn clean install
+mvn install
 mvn exec:java -Dexec.mainClass="target.classes.Main"
 
 echo "Copy files to S3..."
