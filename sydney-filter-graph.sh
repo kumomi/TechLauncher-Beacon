@@ -1,5 +1,5 @@
 echo "Installation Gephi-Filter"
-git clone https://github.com/ukiyo-e/SydneyJenkins.git
+git clone https://github.com/ukiyo-e/SydneyPipeline.git
 
 echo "Cd target forlder"
 cd SydneyJenkins/src/main/resources
@@ -14,7 +14,7 @@ cd ..
 cd ..
 cd ..
 mvn clean install
-mvn clean package
+mvn exec:java -Dexec.mainClass="target.classes.Main"
 
 echo "Copy files to S3..."
 NOW="$(date +'%Y-%m-%d')"
