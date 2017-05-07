@@ -10,12 +10,11 @@ aws s3 --region us-west-2 cp "s3://graphml.rd-switchboard/sydney/sydney.zip" .
 sudo unzip sydney.zip
 rm sydney.zip
 
-echo "Excute Java"
-cd ..
-cd ..
+echo "Go Parent Java"
+cd ../..
 cd ..
 mvn install
-mvn exec:java -Dexec.mainClass="target.classes.Main"
+mvn exec:java -Dexec.mainClass="Main"
 
 echo "Copy files to S3..."
 NOW="$(date +'%Y-%m-%d')"
