@@ -13,6 +13,7 @@ rm sydney.zip
 echo "Go Parent Java"
 cd ../..
 cd ..
+pwd
 mvn install
 mvn exec:java -Dexec.mainClass="Main"
 
