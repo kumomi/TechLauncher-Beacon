@@ -2,7 +2,7 @@ echo "Installation Gephi-Filter"
 git clone https://github.com/ukiyo-e/SydneyPipeline.git
 
 echo "Cd target forlder"
-cd SydneyJenkins/src/main/resources
+cd SydneyPipeline/src/main/resources
 
 echo "Download Sydney Graphml file"
 aws s3 --region us-west-2 cp "s3://graphml.rd-switchboard/sydney/sydney.zip" .
